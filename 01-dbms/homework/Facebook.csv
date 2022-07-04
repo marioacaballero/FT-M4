@@ -1,0 +1,49 @@
+Id,Name,Shape Library,Page ID,Contained By,Group,Line Source,Line Destination,Source Arrow,Destination Arrow,Status,Text Area 1,Text Area 2,Text Area 3,Text Area 4,Text Area 5,Text Area 6,Text Area 7,Text Area 8,Text Area 9,Text Area 10,Text Area 11,Text Area 12
+1,Document,,,,,,,,,DRAFT,Facebook,,,,,,,,,,,
+2,Page,,,,,,,,,,DBMS ER diagram (UML notation),,,,,,,,,,,
+3,Entity,Entity Relationship,2,,,,,,,,Post,imagen,texto,video,fecha,comentarios,likes,emojis,compartir,Id,Id_Persona,
+4,Entity,Entity Relationship,2,,,,,,,,Persona,nombre,apellido,email,telefono,fecha_nacimiento,direccion,seguidores,status,password,usuario,Id
+5,Entity,Entity Relationship,2,,,,,,,,Album,imagenes,videos,fecha,Id,Id_Persona,,,,,,
+6,Entity,Entity Relationship,2,,,,,,,,Mensaje,emisor,receptor,fecha,Id,Id_Persona,,,,,,
+7,Entity,Entity Relationship,2,,,,,,,,Grupo,integrantes,nombre,descripcion,imagen,status,temas,Id,,,,
+8,Entity,Entity Relationship,2,,,,,,,,Evento,fecha,direccion,nombre,interes,Id,,,,,,
+9,Text,Standard,2,,40,,,,,,Facebook,,,,,,,,,,,
+10,Text,Standard,2,,40,,,,,,"Mario Caballero PT-06  |  June 29, 2022",,,,,,,,,,,
+11,Rectangle Container,Flowchart Shapes,2,,41,,,,,,,,,,,,,,,,,
+12,Text,Standard,2,11,41,,,,,,Learn how to edit ERD shapes,,,,,,,,,,,
+13,Text,Standard,2,11,41,,,,,,"To manually customize this ERD:
+Double-click on any text in an entity shape and add/edit text by typing.
+Click on an entity shape and toggle the amount of fields using the advanced shape bar at the top of the canvas.
+Add and remove lines to show relationships between entities.
+To update cardinality, click on a line and then click ""Endpoint"" on the properties bar at the top of the canvas.  
+To automatically create your own ERD:
+Click ""     Import Data"" in the Entity Relationship shape library to the left of the canvas.",,,,,,,,,,,
+14,Text,Standard,2,11,41,,,,,,"Tutorials (Hold Shift + ⌘ or Ctrl, then click)",,,,,,,,,,,
+15,SVGPathBlock2,,2,11,42,,,,,,,,,,,,,,,,,
+16,Button,UI Mockups,2,11,41,,,,,,Read about how to create entity relationship diagrams,,,,,,,,,,,
+17,Button,UI Mockups,2,11,41,,,,,,Watch a tutorial on how to import  your ERD,,,,,,,,,,,
+18,Button,UI Mockups,2,11,41,,,,,,Watch a tutorial on how to export  your ERD,,,,,,,,,,,
+19,Button,UI Mockups,2,11,41,,,,,,Read about ERD symbols and notation,,,,,,,,,,,
+20,Button,UI Mockups,2,11,41,,,,,,"See an example (Hold Shift + ⌘ or Ctrl, then click)",,,,,,,,,,,
+21,User Image,User Images,2,11,41,,,,,,,,,,,,,,,,,
+22,Entity,Entity Relationship,2,,,,,,,,Pagina,Id,likes,imagenes,videos,paginas relacionadas,nombre,,,,,
+23,Entity,Entity Relationship,2,,,,,,,,Historia,vistos,fecha,imagen,video,descripcion,musica,reaccion,Id,Id_Persona,,
+24,Entity,Entity Relationship,2,,,,,,,,Grupo_Persona,Id_Grupo,Id_Persona,administrador,,,,,,,,
+25,Entity,Entity Relationship,2,,,,,,,,Evento_Persona,Id_Evento,Id_Persona,,,,,,,,,
+26,Entity,Entity Relationship,2,,,,,,,,Subscriptor,Id_Pagina,Id_Persona,,,,,,,,,
+27,Entity,Entity Relationship,2,,,,,,,,Persona_Persona,Id_Persona,Id,,,,,,,,,
+28,Line,,2,,,4,24,CFN ERD One Arrow,CFN ERD Many Arrow,,,,,,,,,,,,,
+29,Line,,2,,,7,24,CFN ERD One Arrow,CFN ERD Many Arrow,,,,,,,,,,,,,
+30,Line,,2,,,4,25,CFN ERD One Arrow,CFN ERD Many Arrow,,,,,,,,,,,,,
+31,Line,,2,,,8,25,CFN ERD One Arrow,CFN ERD Many Arrow,,,,,,,,,,,,,
+32,Line,,2,,,4,26,CFN ERD One Arrow,CFN ERD Many Arrow,,,,,,,,,,,,,
+33,Line,,2,,,22,26,CFN ERD One Arrow,CFN ERD Many Arrow,,,,,,,,,,,,,
+34,Line,,2,,,4,3,CFN ERD One Arrow,CFN ERD Many Arrow,,,,,,,,,,,,,
+35,Line,,2,,,4,5,CFN ERD One Arrow,CFN ERD Many Arrow,,,,,,,,,,,,,
+36,Line,,2,,,4,23,CFN ERD One Arrow,CFN ERD Many Arrow,,,,,,,,,,,,,
+37,Line,,2,,,4,6,CFN ERD One Arrow,CFN ERD Many Arrow,,,,,,,,,,,,,
+38,Line,,2,,,4,27,CFN ERD One Arrow,CFN ERD Many Arrow,,,,,,,,,,,,,
+39,Line,,2,,,4,27,CFN ERD One Arrow,CFN ERD Many Arrow,,,,,,,,,,,,,
+40,Group 1,,2,,,,,,,,,,,,,,,,,,,
+41,Group 2,,2,,,,,,,,,,,,,,,,,,,
+42,Group 3,,2,,41,,,,,,,,,,,,,,,,,

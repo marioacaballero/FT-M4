@@ -1,0 +1,140 @@
+CREATE TABLE "Grupo" (
+  "integrantes" <type>,
+  "nombre" <type>,
+  "descripcion" <type>,
+  "imagen" <type>,
+  "status" <type>,
+  "temas" <type>,
+  "Id" <type>
+);
+
+CREATE TABLE "Evento" (
+  "fecha" <type>,
+  "direccion" <type>,
+  "nombre" <type>,
+  "interes" <type>,
+  "Id" <type>
+);
+
+CREATE TABLE "Persona" (
+  "nombre" <type>,
+  "apellido" <type>,
+  "email" <type>,
+  "telefono" <type>,
+  "fecha_nacimiento" <type>,
+  "direccion" <type>,
+  "seguidores" <type>,
+  "status" <type>,
+  "password" <type>,
+  "usuario" <type>,
+  "Id" <type>
+);
+
+CREATE TABLE "Mensaje" (
+  "emisor" <type>,
+  "receptor" <type>,
+  "fecha" <type>,
+  "Id" <type>,
+  "Id_Persona" <type>,
+  CONSTRAINT "FK_Mensaje.Id_Persona"
+    FOREIGN KEY ("Id_Persona")
+      REFERENCES "Persona"("Id")
+);
+
+CREATE TABLE "Post" (
+  "imagen" <type>,
+  "texto" <type>,
+  "video" <type>,
+  "fecha" <type>,
+  "comentarios" <type>,
+  "likes" <type>,
+  "emojis" <type>,
+  "compartir" <type>,
+  "Id" <type>,
+  "Id_Persona" <type>,
+  CONSTRAINT "FK_Post.Id_Persona"
+    FOREIGN KEY ("Id_Persona")
+      REFERENCES "Persona"("Id")
+);
+
+CREATE TABLE "Album" (
+  "imagenes" <type>,
+  "videos" <type>,
+  "fecha" <type>,
+  "Id" <type>,
+  "Id_Persona" <type>,
+  CONSTRAINT "FK_Album.Id_Persona"
+    FOREIGN KEY ("Id_Persona")
+      REFERENCES "Persona"("Id")
+);
+
+CREATE TABLE "Pagina" (
+  "Id" <type>,
+  "likes" <type>,
+  "imagenes" <type>,
+  "videos" <type>,
+  "paginas relacionadas" <type>,
+  "nombre" <type>
+);
+
+CREATE TABLE "Historia" (
+  "vistos" <type>,
+  "fecha" <type>,
+  "imagen" <type>,
+  "video" <type>,
+  "descripcion" <type>,
+  "musica" <type>,
+  "reaccion" <type>,
+  "Id" <type>,
+  "Id_Persona" <type>,
+  CONSTRAINT "FK_Historia.Id_Persona"
+    FOREIGN KEY ("Id_Persona")
+      REFERENCES "Persona"("Id")
+);
+
+CREATE TABLE "Grupo_Persona" (
+  "Id_Grupo" <type>,
+  "Id_Persona" <type>,
+  "administrador" <type>,
+  CONSTRAINT "FK_Grupo_Persona.Id_Persona"
+    FOREIGN KEY ("Id_Persona")
+      REFERENCES "Persona"("Id"),
+  CONSTRAINT "FK_Grupo_Persona.Id_Grupo"
+    FOREIGN KEY ("Id_Grupo")
+      REFERENCES "Grupo"("Id")
+);
+
+CREATE TABLE "Evento_Persona" (
+  "Id_Evento" <type>,
+  "Id_Persona" <type>,
+  CONSTRAINT "FK_Evento_Persona.Id_Persona"
+    FOREIGN KEY ("Id_Persona")
+      REFERENCES "Persona"("Id"),
+  CONSTRAINT "FK_Evento_Persona.Id_Evento"
+    FOREIGN KEY ("Id_Evento")
+      REFERENCES "Evento"("Id")
+);
+
+CREATE TABLE "Subscriptor" (
+  "Id_Pagina" <type>,
+  "Id_Persona" <type>,
+  CONSTRAINT "FK_Subscriptor.Id_Persona"
+    FOREIGN KEY ("Id_Persona")
+      REFERENCES "Persona"("Id"),
+  CONSTRAINT "FK_Subscriptor.Id_Pagina"
+    FOREIGN KEY ("Id_Pagina")
+      REFERENCES "Pagina"("Id")
+);
+
+CREATE TABLE "Persona_Persona" (
+  "Id_Persona" <type>,
+  "Id" <type>,
+  "" <type>,
+  CONSTRAINT "FK_Persona_Persona.Id_Persona"
+    FOREIGN KEY ("Id_Persona")
+      REFERENCES "Persona"("Id"),
+  CONSTRAINT "FK_Persona_Persona.Id"
+    FOREIGN KEY ("Id")
+      REFERENCES "Persona"("Id")
+);
+
